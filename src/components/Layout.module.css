@@ -1,0 +1,52 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+.header,
+.footer,
+.main {
+  flex-shrink: 0; /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+}
+
+.header,
+.footer {
+  background-color: #616161;
+  padding: 1em;
+}
+
+.header {
+  font-family: cursive, serif;
+  font-size: 1.25em;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.totalPoemCount {
+  font-size: 0.67em;
+}
+
+.main {
+  margin: 0.67em 1em 0;
+  flex-grow: 1;
+}
+
+.footer {
+  margin-top: 10em;
+  font-size: 0.5em;
+  color: white;
+}
+
+.footer a {
+  color: white;
+}

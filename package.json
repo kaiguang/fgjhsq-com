@@ -1,0 +1,44 @@
+{
+  "name": "renyu-li",
+  "private": true,
+  "description": "A website for poems written by Li, Renyu",
+  "version": "1.0.0",
+  "author": "Kaiguang Li <lkaiguang@gmail.com>",
+  "dependencies": {
+    "gatsby": "^2.24.63",
+    "gatsby-image": "^2.4.19",
+    "gatsby-plugin-manifest": "^2.4.30",
+    "gatsby-plugin-offline": "^3.2.28",
+    "gatsby-plugin-react-helmet": "^3.3.11",
+    "gatsby-plugin-s3": "^0.3.5",
+    "gatsby-plugin-sharp": "^2.6.36",
+    "gatsby-remark-copy-linked-files": "^2.3.16",
+    "gatsby-remark-images": "^3.3.30",
+    "gatsby-source-filesystem": "^2.3.30",
+    "gatsby-transformer-remark": "^2.8.35",
+    "gatsby-transformer-sharp": "^2.5.15",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "rm -rf public && rm -rf .cache && gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kaiguang/renyu-li"
+  },
+  "bugs": {
+    "url": "https://github.com/Kaiguang/renyu-li/issues"
+  }
+}

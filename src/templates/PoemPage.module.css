@@ -1,0 +1,41 @@
+.page {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.title {
+  font-weight: bold;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.title,
+.poem,
+.author {
+  font-family: Kaiti TC, Kaiti SC, Kai, cursive, serif;
+}
+
+.author {
+  margin-block-end: 1em;
+}
+
+.poem {
+  white-space: pre-line;
+  margin-block-end: 2em;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+.date {
+  font-style: italic;
+}
+
+.markdownBody {
+  margin-bottom: 4em;
+}
+
+.link {
+  display: block;
+  color: black;
+  margin-top: 1em;
+}
