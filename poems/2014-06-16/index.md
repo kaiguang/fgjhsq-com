@@ -1,6 +1,6 @@
 ---
 title: 艾城六月
-author: 李仁玉
+author: 放歌江海山阙
 date: 2014-06-16
 poem: |
   天

@@ -1,6 +1,6 @@
 ---
 title: 呼伦贝尔短歌行
-author: 李仁玉
+author: 放歌江海山阙
 date: 2016-07-05
 poem: |
   其一

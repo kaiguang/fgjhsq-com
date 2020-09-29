@@ -1,6 +1,6 @@
 ---
 title: 甲午年清明
-author: 李仁玉
+author: 放歌江海山阙
 date: 2014-04-05
 poem: |
   一

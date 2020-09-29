@@ -19,6 +19,6 @@ read p2
 
 mkdir ./$date
 
-echo ---\\ntitle: $title\\nauthor: 李仁玉\\ndate: $date\\npoem: \|\\n\ \ $p1\\n\\n\ \ $p2\\n---\\n > ./$date/index.md
+echo ---\\ntitle: $title\\nauthor: 放歌江海山阙\\ndate: $date\\npoem: \|\\n\ \ $p1\\n\\n\ \ $p2\\n---\\n > ./$date/index.md
 
 code ./$date/index.md

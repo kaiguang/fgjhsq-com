@@ -1,6 +1,6 @@
 ---
 title: 七律·胶东印象
-author: 李仁玉
+author: 放歌江海山阙
 date: 2012-10-30
 poem: |
   一
