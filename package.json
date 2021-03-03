@@ -2,7 +2,7 @@
   "name": "renyu-li",
   "private": true,
   "description": "A website for poems written by Li, Renyu.",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "author": "Kaiguang Li <lkaiguang@gmail.com>",
   "scripts": {
     "build": "rm -rf public && rm -rf .cache && gatsby build",

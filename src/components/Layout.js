@@ -28,12 +28,15 @@ export default function Layout({ children, totalPoemCount }) {
         <header className={header}>
           <Link to="/">
             <span>{data.site.siteMetadata.title}</span>
-            {totalPoemCount ? (
-              <span className={totalPoemCountText}>共{totalPoemCount}首</span>
-            ) : null}
           </Link>
+
+          {totalPoemCount ? (
+            <span className={totalPoemCountText}>共{totalPoemCount}首</span>
+          ) : null}
         </header>
+
         <main className={main}>{children}</main>
+
         <footer className={footer}>
           网站建设{" "}
           <a

@@ -19,17 +19,23 @@
 }
 
 .header {
+  color: white;
   font-family: cursive, serif;
   font-size: 1.25em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header a {
   text-decoration: none;
   color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  padding: 5px;
+}
+.header a:hover {
+  color: #ffa72b;
 }
 
 .totalPoemCountText {
