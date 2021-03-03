@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout.js";
-import styles from "./index.module.css";
+import { link, date } from "./index.module.css";
 
 export default function Home({ data }) {
   return (
@@ -11,10 +11,10 @@ export default function Home({ data }) {
           id={node.fields.slug}
           key={node.fields.slug}
           to={node.fields.slug}
-          className={styles.link}
+          className={link}
         >
           <span>{node.frontmatter.title}</span>
-          <span className={styles.date}>{node.frontmatter.date}</span>
+          <span className={date}>{node.frontmatter.date}</span>
         </Link>
       ))}
     </Layout>

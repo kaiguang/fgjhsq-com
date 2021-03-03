@@ -48,14 +48,5 @@ module.exports = {
         region: `ap-northeast-2`,
       },
     },
-    {
-      resolve: `gatsby-plugin-baidu-tongji`,
-      options: {
-        siteid: "840d0e59a090688decb4ac4ba1b12daf",
-      },
-    },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 };
