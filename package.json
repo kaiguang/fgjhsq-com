@@ -5,9 +5,9 @@
   "version": "2.0.0",
   "author": "Kaiguang Li <lkaiguang@gmail.com>",
   "scripts": {
-    "build": "rm -rf public && rm -rf .cache && gatsby build",
-    "dev": "gatsby develop -H 0.0.0.0",
-    "start": "npm run develop",
+    "build": "rm -rf public .cache && gatsby build",
+    "dev": "rm -rf public .cache && gatsby develop -H 0.0.0.0",
+    "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
