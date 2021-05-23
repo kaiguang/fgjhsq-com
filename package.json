@@ -1,16 +1,12 @@
 {
-  "name": "renyu-li",
+  "name": "fgjhsq-com",
   "private": true,
-  "description": "A website for poems written by Li, Renyu.",
-  "version": "2.0.0",
+  "description": "A website for poems written by 放歌江海山阙",
+  "version": "3.0.0",
   "author": "Kaiguang Li <lkaiguang@gmail.com>",
   "scripts": {
     "build": "rm -rf public .cache && gatsby build",
     "dev": "rm -rf public .cache && gatsby develop -H 0.0.0.0",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "npm run build && gatsby-plugin-s3 deploy"
   },
   "dependencies": {
@@ -32,10 +28,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/Kaiguang/renyu-li"
+    "url": "https://github.com/Kaiguang/fgjhsq-com"
   },
   "bugs": {
-    "url": "https://github.com/Kaiguang/renyu-li/issues"
+    "url": "https://github.com/Kaiguang/fgjhsq-com/issues"
   },
   "license": "(CC-BY-4.0 OR MIT)"
 }

@@ -41,12 +41,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: `renyu.li`,
+        bucketName: `fgjhsq-com`,
         acl: null,
         protocol: `https`,
-        hostname: `renyu.li`,
-        region: `ap-northeast-2`,
+        hostname: `fgjhsq-com`,
+        region: `us-west-2`,
       },
     },
   ],
-};
+}
