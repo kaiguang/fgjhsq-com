@@ -1,14 +1,14 @@
-import React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
-import PropTypes from "prop-types";
+import React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 import {
   container,
   header,
   totalPoemCountText,
   main,
   footer,
-} from "./Layout.module.css";
-import SEO from "./SEO.js";
+} from './Layout.module.css'
+import SEO from './SEO.js'
 
 export default function Layout({ children, totalPoemCount }) {
   const data = useStaticQuery(graphql`
@@ -19,7 +19,7 @@ export default function Layout({ children, totalPoemCount }) {
         }
       }
     }
-  `);
+  `)
 
   return (
     <>
@@ -38,21 +38,13 @@ export default function Layout({ children, totalPoemCount }) {
         <main className={main}>{children}</main>
 
         <footer className={footer}>
-          网站建设{" "}
-          <a
-            href="https://github.com/Kaiguang"
-            target="_blank"
-            rel="noreferrer"
-          >
-            铠光
-          </a>{" "}
-          @ {new Date().getFullYear()}
+          放歌江海山阙 @ {new Date().getFullYear()}
         </footer>
       </div>
     </>
-  );
+  )
 }
 
 Layout.propTypes = {
   totalPoemCount: PropTypes.number,
-};
+}
