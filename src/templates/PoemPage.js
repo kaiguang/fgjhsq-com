@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { title, author, poem, date, markdownBody, link } from './PoemPage.module.css'
+import { container, title, author, poem, date, markdownBody, link } from './PoemPage.module.css'
 import Layout from '../components/Layout.js'
 
 export default function PoemPage({ data, pageContext }) {
@@ -10,25 +10,32 @@ export default function PoemPage({ data, pageContext }) {
 
   return (
     <Layout>
-      <h1 className={title}>{md.frontmatter.title}</h1>
-      <div className={author}>{md.frontmatter.author}</div>
-      <div className={poem}>{md.frontmatter.poem}</div>
-      <hr />
-      <p className={date}>{`创作于 ${md.frontmatter.date}`}</p>
-      <div className={markdownBody} dangerouslySetInnerHTML={{ __html: md.html }} />
+      <div className={container}>
+        <h1 className={title}>{md.frontmatter.title}</h1>
+        <div className={author}>{md.frontmatter.author}</div>
+        <div className={poem}>{md.frontmatter.poem}</div>
+        <hr />
+        <p className={date}>{`创作于 ${md.frontmatter.date}`}</p>
+        <div className={markdownBody} dangerouslySetInnerHTML={{ __html: md.html }} />
 
-      <Link className={link} to={`/#${md.fields.slug}`}>
-        返回列表
-      </Link>
-      {previous ? (
-        <Link
-          className={link}
-          to={previous.fields.slug}
-        >{`更近：${previous.frontmatter.title} ${previous.frontmatter.date}`}</Link>
-      ) : null}
-      {next ? (
-        <Link className={link} to={next.fields.slug}>{`更早：${next.frontmatter.title} ${next.frontmatter.date}`}</Link>
-      ) : null}
+        <Link className={link} to={`/#${md.fields.slug}`}>
+          返回列表
+        </Link>
+        {previous ? (
+          <Link className={link} to={previous.fields.slug}>
+            <span>更近：</span>
+            <span>{previous.frontmatter.title}</span>
+            <span>{previous.frontmatter.date}</span>
+          </Link>
+        ) : null}
+        {next ? (
+          <Link className={link} to={next.fields.slug}>
+            <span>更早：</span>
+            <span>{next.frontmatter.title}</span>
+            <span>{next.frontmatter.date}</span>
+          </Link>
+        ) : null}
+      </div>
     </Layout>
   )
 }

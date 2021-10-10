@@ -1,6 +1,5 @@
-.page {
-  padding-left: 1em;
-  padding-right: 1em;
+.container {
+  padding: 0.75em;
 }
 
 .title {
@@ -35,7 +34,9 @@
 }
 
 .link {
-  display: block;
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column;
   color: black;
-  margin-top: 1em;
+  padding: 0.5em 0;
 }
