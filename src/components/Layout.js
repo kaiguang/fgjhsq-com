@@ -1,14 +1,8 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
-import {
-  container,
-  header,
-  totalPoemCountText,
-  main,
-  footer,
-} from './Layout.module.css'
-import SEO from './SEO.js'
+import { container, header, totalPoemCountText, main, footer } from './Layout.module.css'
+import SEO from './SEO'
 
 export default function Layout({ children, totalPoemCount }) {
   const data = useStaticQuery(graphql`
@@ -30,16 +24,12 @@ export default function Layout({ children, totalPoemCount }) {
             <span>{data.site.siteMetadata.title}</span>
           </Link>
 
-          {totalPoemCount ? (
-            <span className={totalPoemCountText}>共{totalPoemCount}首</span>
-          ) : null}
+          {totalPoemCount ? <span className={totalPoemCountText}>共{totalPoemCount}首</span> : null}
         </header>
 
         <main className={main}>{children}</main>
 
-        <footer className={footer}>
-          放歌江海山阙 @ {new Date().getFullYear()}
-        </footer>
+        <footer className={footer}>放歌江海山阙 @ {new Date().getFullYear()}</footer>
       </div>
     </>
   )

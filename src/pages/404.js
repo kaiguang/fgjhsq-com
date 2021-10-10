@@ -1,6 +1,6 @@
-import React from "react";
-import { Link } from "gatsby";
-import Layout from "../components/Layout.js";
+import React from 'react'
+import { Link } from 'gatsby'
+import Layout from '../components/Layout.js'
 
 export default function NotFoundPage() {
   return (
@@ -9,5 +9,5 @@ export default function NotFoundPage() {
       <p>此路径不存在</p>
       <Link to="/">返回主页</Link>
     </Layout>
-  );
+  )
 }

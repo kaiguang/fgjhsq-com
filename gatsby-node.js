@@ -6,24 +6,24 @@
 
 // You can delete this file if you're not using it
 
-const path = require("path");
-const { createFilePath } = require("gatsby-source-filesystem");
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions;
+  const { createNodeField } = actions
 
-  if (node.internal.type === "MarkdownRemark") {
-    const slug = createFilePath({ node, getNode });
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
       value: slug,
-    });
+    })
   }
-};
+}
 
 exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions;
+  const { createPage } = actions
 
   const result = await graphql(`
     query {
@@ -55,17 +55,17 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `);
+  `)
 
   result.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
     createPage({
       path: node.fields.slug,
-      component: path.resolve("./src/templates/PoemPage.js"),
+      component: path.resolve('./src/templates/PoemPage.js'),
       context: {
         slug: node.fields.slug,
         next,
         previous,
       },
-    });
-  });
-};
+    })
+  })
+}

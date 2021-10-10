@@ -1,19 +1,12 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
-import {
-  title,
-  author,
-  poem,
-  date,
-  markdownBody,
-  link,
-} from "./PoemPage.module.css";
-import Layout from "../components/Layout.js";
+import React from 'react'
+import { graphql, Link } from 'gatsby'
+import { title, author, poem, date, markdownBody, link } from './PoemPage.module.css'
+import Layout from '../components/Layout.js'
 
 export default function PoemPage({ data, pageContext }) {
-  const md = data.markdownRemark;
-  const next = pageContext.next;
-  const previous = pageContext.previous;
+  const md = data.markdownRemark
+  const next = pageContext.next
+  const previous = pageContext.previous
 
   return (
     <Layout>
@@ -22,10 +15,7 @@ export default function PoemPage({ data, pageContext }) {
       <div className={poem}>{md.frontmatter.poem}</div>
       <hr />
       <p className={date}>{`创作于 ${md.frontmatter.date}`}</p>
-      <div
-        className={markdownBody}
-        dangerouslySetInnerHTML={{ __html: md.html }}
-      />
+      <div className={markdownBody} dangerouslySetInnerHTML={{ __html: md.html }} />
 
       <Link className={link} to={`/#${md.fields.slug}`}>
         返回列表
@@ -37,17 +27,14 @@ export default function PoemPage({ data, pageContext }) {
         >{`更近：${previous.frontmatter.title} ${previous.frontmatter.date}`}</Link>
       ) : null}
       {next ? (
-        <Link
-          className={link}
-          to={next.fields.slug}
-        >{`更早：${next.frontmatter.title} ${next.frontmatter.date}`}</Link>
+        <Link className={link} to={next.fields.slug}>{`更早：${next.frontmatter.title} ${next.frontmatter.date}`}</Link>
       ) : null}
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
@@ -61,4 +48,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`
