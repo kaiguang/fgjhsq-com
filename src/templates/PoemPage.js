@@ -18,18 +18,18 @@ export default function PoemPage({ data, pageContext }) {
         <p className={date}>{`创作于 ${md.frontmatter.date}`}</p>
         <div className={markdownBody} dangerouslySetInnerHTML={{ __html: md.html }} />
 
-        <Link className={link} to={`/#${md.fields.slug}`}>
+        <Link className={link} to={`${pageContext.poemListPagePath}#${md.fields.slug}`}>
           返回列表
         </Link>
         {previous ? (
-          <Link className={link} to={previous.fields.slug}>
+          <Link className={link} to={`/poems${previous.fields.slug}`}>
             <span>更近：</span>
             <span>{previous.frontmatter.title}</span>
             <span>{previous.frontmatter.date}</span>
           </Link>
         ) : null}
         {next ? (
-          <Link className={link} to={next.fields.slug}>
+          <Link className={link} to={`/poems${next.fields.slug}`}>
             <span>更早：</span>
             <span>{next.frontmatter.title}</span>
             <span>{next.frontmatter.date}</span>

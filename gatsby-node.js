@@ -57,15 +57,37 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  result.data.allMarkdownRemark.edges.forEach(({ node, next, previous }) => {
+  const poems = result.data.allMarkdownRemark.edges
+
+  // Create poem list pages
+  const poemsPerPage = 20
+  const numberOfPages = Math.ceil(poems.length / poemsPerPage)
+  for (let i = 0; i <= numberOfPages; i++) {
+    const poemListPagePath = i === 0 ? `/` : `/poem-lists/${i + 1}`
+
     createPage({
-      path: node.fields.slug,
-      component: path.resolve('./src/templates/PoemPage.js'),
+      path: poemListPagePath,
+      component: path.resolve('./src/templates/PoemList.js'),
       context: {
-        slug: node.fields.slug,
-        next,
-        previous,
+        limit: poemsPerPage,
+        skip: i * poemsPerPage,
+        numberOfPages,
+        currentPage: i + 1,
       },
     })
-  })
+
+    // Create poem pages
+    poems.slice(i * poemsPerPage, i * poemsPerPage + poemsPerPage).forEach(({ node, next, previous }) => {
+      createPage({
+        path: `/poems${node.fields.slug}`,
+        component: path.resolve('./src/templates/PoemPage.js'),
+        context: {
+          slug: node.fields.slug,
+          next,
+          previous,
+          poemListPagePath,
+        },
+      })
+    })
+  }
 }

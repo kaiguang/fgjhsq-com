@@ -2,12 +2,12 @@
   "name": "fgjhsq-com",
   "private": true,
   "description": "A website for poems written by 放歌江海山阙",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "author": "Kaiguang Li <lkaiguang@gmail.com>",
   "scripts": {
     "build": "rm -rf public .cache && gatsby build",
     "dev": "rm -rf public .cache && gatsby develop -H 0.0.0.0",
-    "deploy": "npm run build && gatsby-plugin-s3 deploy"
+    "deploy": "yarn run build && gatsby-plugin-s3 deploy"
   },
   "dependencies": {
     "gatsby": "^3.8.0",
