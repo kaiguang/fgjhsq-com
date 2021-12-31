@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import PropTypes from 'prop-types'
 import { container, header, totalPoemCountText, main, footer } from './Layout.module.css'
-import SEO from './SEO'
+import Seo from './SeoComponent'
 
 export default function Layout({ children, totalPoemCount }) {
   const data = useStaticQuery(graphql`
@@ -17,7 +17,7 @@ export default function Layout({ children, totalPoemCount }) {
 
   return (
     <>
-      <SEO />
+      <Seo />
       <div className={container}>
         <header className={header}>
           <Link to="/">
