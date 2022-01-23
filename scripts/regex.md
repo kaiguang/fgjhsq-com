@@ -1,3 +1,5 @@
+RegEx search patterns to replace the date using `.` with `-`.
+
 ## Replace 2022.1.1 (dddd.d.d)
 
 Search for:
