@@ -1,7 +1,7 @@
 {
   "name": "fgjhsq-com",
   "description": "A website for poems written by 放歌江海山阙",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "author": "Kaiguang Li <hello@likaiguang.com>",
   "scripts": {
     "predev": "rm -rf public .cache",
