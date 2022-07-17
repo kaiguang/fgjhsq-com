@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import PageNumbers from '../components/PageNumbers'
-import { link, date } from './PoemList.module.css'
+import React from "react";
+import { Link, graphql } from "gatsby";
+import Layout from "../components/Layout";
+import PageNumbers from "../components/PageNumbers";
+import { link, date } from "./PoemList.module.css";
 
 export default function PoemList({ data, pageContext }) {
   return (
@@ -16,7 +16,7 @@ export default function PoemList({ data, pageContext }) {
 
       <PageNumbers currentPage={pageContext.currentPage} numberOfPages={pageContext.numberOfPages} />
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
@@ -36,4 +36,4 @@ export const query = graphql`
       totalCount
     }
   }
-`
+`;

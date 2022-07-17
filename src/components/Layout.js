@@ -1,8 +1,8 @@
-import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import PropTypes from 'prop-types'
-import { container, header, totalPoemCountText, main, footer } from './Layout.module.css'
-import Seo from './Seo'
+import React from "react";
+import { Link, useStaticQuery, graphql } from "gatsby";
+import PropTypes from "prop-types";
+import { container, header, totalPoemCountText, main, footer } from "./Layout.module.css";
+import Seo from "./Seo";
 
 export default function Layout({ children, totalPoemCount }) {
   const data = useStaticQuery(graphql`
@@ -13,7 +13,7 @@ export default function Layout({ children, totalPoemCount }) {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
@@ -32,9 +32,9 @@ export default function Layout({ children, totalPoemCount }) {
         <footer className={footer}>放歌江海山阙 @ {new Date().getFullYear()}</footer>
       </div>
     </>
-  )
+  );
 }
 
 Layout.propTypes = {
   totalPoemCount: PropTypes.number,
-}
+};

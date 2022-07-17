@@ -9,7 +9,8 @@
     "prebuild": "rm -rf public .cache",
     "build": "gatsby build",
     "predeploy": "npm run build",
-    "deploy": "gatsby-plugin-s3 deploy"
+    "deploy": "gatsby-plugin-s3 deploy",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "gatsby": "^3.8.0",

@@ -1,6 +1,6 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import * as styles from './PageNumbers.module.css'
+import React from "react";
+import { Link } from "gatsby";
+import * as styles from "./PageNumbers.module.css";
 
 export default function PageNumbers({ numberOfPages, currentPage }) {
   return (
@@ -25,5 +25,5 @@ export default function PageNumbers({ numberOfPages, currentPage }) {
         </Link>
       )}
     </div>
-  )
+  );
 }

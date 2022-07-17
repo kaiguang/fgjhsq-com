@@ -1,12 +1,12 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
-import { container, title, author, poem, date, markdownBody, link } from './PoemPage.module.css'
-import Layout from '../components/Layout.js'
+import React from "react";
+import { graphql, Link } from "gatsby";
+import { container, title, author, poem, date, markdownBody, link } from "./PoemPage.module.css";
+import Layout from "../components/Layout.js";
 
 export default function PoemPage({ data, pageContext }) {
-  const md = data.markdownRemark
-  const next = pageContext.next
-  const previous = pageContext.previous
+  const md = data.markdownRemark;
+  const next = pageContext.next;
+  const previous = pageContext.previous;
 
   return (
     <Layout>
@@ -37,7 +37,7 @@ export default function PoemPage({ data, pageContext }) {
         ) : null}
       </div>
     </Layout>
-  )
+  );
 }
 
 export const query = graphql`
@@ -55,4 +55,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
