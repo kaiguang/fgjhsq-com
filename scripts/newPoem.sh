@@ -1,4 +1,5 @@
 # a shell script to make new poems in the ../poems directory
+# cd to the directory and run ./newPoem.sh
 
 poemsDir="../poems"
 
@@ -23,4 +24,4 @@ mkdir $poemsDir/$date
 
 echo ---\\ntitle: $title\\nauthor: 放歌江海山阙\\ndate: $date\\npoem: \|\\n\ \ $p1\\n\\n\ \ $p2\\n---\\n > $poemsDir/$date/index.md
 
-open $poemsDir/$date/index.md
+nvim $poemsDir/$date/index.md
