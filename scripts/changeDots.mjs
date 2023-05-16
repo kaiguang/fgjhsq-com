@@ -2,7 +2,8 @@
 
 // Change the date from 2023.1.1 to 2023-01-01, change the word.word to word·word
 // How to use:
-// ./changeDots.mjs tmp.txt
+// cd to the root of this repo
+// ./scripts/changeDots.mjs tmp.txt
 
 import * as fs from "node:fs/promises";
 import path from "node:path";
