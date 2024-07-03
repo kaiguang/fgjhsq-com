@@ -1,0 +1,27 @@
+{
+  "name": "data",
+  "version": "1.0.0",
+  "scripts": {
+    "index": "tsc && node build/index.js",
+    "read-file": "tsc && node build/scripts/read-file.js"
+  },
+  "keywords": [],
+  "author": "Kaiguang Li <hello@likaiguang.com>",
+  "license": "CC-BY-4.0",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "fuse.js": "^7.0.0",
+    "remark-extract-frontmatter": "^3.2.0",
+    "remark-frontmatter": "^5.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
+    "typescript": "^5.5.2",
+    "unified": "^11.0.5",
+    "yaml": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "prettier": "^3.3.2"
+  }
+}
