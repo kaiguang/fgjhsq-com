@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "index": "tsc && node build/index.js",
+    "next-copy-assets": "tsc && node build/scripts/next-copy-assets.js",
     "read-file": "tsc && node build/scripts/read-file.js"
   },
   "keywords": [],

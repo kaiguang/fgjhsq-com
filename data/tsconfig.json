@@ -10,5 +10,5 @@
     "skipLibCheck": true,
     "outDir": "build"
   },
-  "include": ["index.ts", "scripts/read-file.ts"]
+  "include": ["index.ts", "scripts/**/*.ts"]
 }
