@@ -24,4 +24,4 @@ mkdir $poemsDir/$date
 
 echo ---\\ntitle: $title\\nauthor: 放歌江海山阙\\ndate: $date\\npoem: \|\\n\ \ $p1\\n\\n\ \ $p2\\n---\\n > $poemsDir/$date/index.md
 
-cursor $poemsDir/$date/index.md
+code $poemsDir/$date/index.md
