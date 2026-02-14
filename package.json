@@ -8,7 +8,7 @@
     "dev": "gatsby develop -H 0.0.0.0",
     "prebuild": "rm -rf public .cache",
     "build": "gatsby build",
-    "predeploy": "npm run build",
+    "predeploy": "yarn run build",
     "deploy": "gatsby-plugin-s3 deploy",
     "format:check": "prettier --check ."
   },
